@@ -36,7 +36,7 @@ export function getPostComments(id){
 
 export function updatePost(id,post) {
     return fetch(`${URL}/posts/${id}`,{
-        header,
+        headers:header.headers,
         method:'PUT',
         body:JSON.stringify(post)
     }).then( res => { 
@@ -46,7 +46,7 @@ export function updatePost(id,post) {
 
 export function addPost(post){
     return fetch(`${URL}/posts`, {
-        header,
+        headers:header.headers,
         method:'POST',
         body:JSON.stringify(post)
     }).then( res => { 
@@ -56,7 +56,7 @@ export function addPost(post){
 
 export function postVote(id,vote){
     return fetch(`${URL}/posts/${id}`, {
-        header,
+        headers:header.headers,
         method:'POST',
         body:JSON.stringify(vote)
     }).then( res => { 
@@ -66,7 +66,7 @@ export function postVote(id,vote){
 
 export function deletePost(id){
     return fetch(`${URL}/posts/${id}`, {
-        header,
+        headers:header.headers,
         method:'DELETE'
     }).then( res => { 
         return res
@@ -75,7 +75,7 @@ export function deletePost(id){
 
 export function addComment(comment){
     return fetch(`${URL}/comments`, {
-        header,
+        headers:header.headers,
         method:'POST',
         body:JSON.stringify(comment)
     }).then( res => { 
@@ -84,7 +84,7 @@ export function addComment(comment){
 }
 export function postVoteComment(id,vote){
     return fetch(`${URL}/comments/${id}`, {
-        header,
+        headers:header.headers,
         method:'POST',
         body:JSON.stringify(vote)
     }).then( res => { 
@@ -95,7 +95,7 @@ export function postVoteComment(id,vote){
 
 export function deleteComment(id){
     return fetch(`${URL}/comments/${id}`, {
-        header,
+        headers:header.headers,
         method:'DELETE'
     }).then( res => { 
         return res
@@ -111,7 +111,7 @@ export function getComment(id){
 
 export function updateComment(id,comment) {
     return fetch(`${URL}/comments/${id}`,{
-        header,
+        headers:header.headers,
         method:'PUT',
         body:JSON.stringify(comment)
     }).then( res => { 
