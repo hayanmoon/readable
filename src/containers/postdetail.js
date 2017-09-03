@@ -51,7 +51,9 @@ class PostContainer extends Component {
           <div className="tile-content">
             <p className="tile-title">
               {post.title || 'no title'}
-              <span className="tile-date text-gray">{displayDate(postDate)}</span>
+              <span className="tile-date text-gray mx-1">{displayDate(postDate)}</span>
+              <span className="text-gray mx-1">|</span>
+              <span className="text-gray">{post.author || 'anonymous'}</span>
             </p>
             <p className="tile-subtitle">{post.body}</p>
           </div>

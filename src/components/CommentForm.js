@@ -26,7 +26,7 @@ class CommentForm extends Component {
         id: uuid(),
         timestamp: Date.now(),
         body,
-        owner,
+        author:owner,
         parentId
       })
     )
@@ -52,7 +52,7 @@ class CommentForm extends Component {
   }
 
   render() {
-    const {  body, owner, mode } = this.props
+    const {  body, author, mode } = this.props
     return (
       <div>
         {mode === 'new' ? <h5>New Comment</h5> : <h5>Update Comment</h5>}
@@ -75,9 +75,9 @@ class CommentForm extends Component {
             </label>
             <input
               className="form-input"
-              name="owner"
+              name="author"
               type="text"
-              value={owner}
+              value={author}
               onChange={this.handleChange}
             />
           </div>

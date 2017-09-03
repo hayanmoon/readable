@@ -42,7 +42,8 @@ class Comments extends Component {
                   <p>{comment.body}</p>
                   <div className="text-gray">
                     Votes: {comment.voteScore} | {' '}
-                    {displayDate(new Date(comment.timestamp))}
+                    {displayDate(new Date(comment.timestamp))} | {' '}
+                    { comment.author || 'anonymous'}
                   </div>
                   <div className="card-footer">
                     <button

@@ -6,7 +6,7 @@ import {
 
 const initialState = {
     body: '',
-    owner: ''
+    author: ''
 }
 
 const commentForm = (state = initialState, action) => {
