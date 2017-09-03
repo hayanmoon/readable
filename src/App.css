@@ -1,0 +1,17 @@
+.tile-score{
+    font-size: 22px;
+    text-align: center;
+    width: 50px;
+    line-height: 3rem;
+}
+.tile-date{
+    margin-left:20px;
+}
+.comment-edit{
+   color:#50596c
+}
+.comment-actions{
+    position: absolute;
+    right: 6px;
+    top: 0;
+}
